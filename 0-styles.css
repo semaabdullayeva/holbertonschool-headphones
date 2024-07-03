@@ -17,6 +17,7 @@
     font-family: 'Source Sans Pro Extra Light';
     src: url(/assets/fonts/SourceSansPro-ExtraLight.otf);
 }
+
 * {
     padding: 0;
     margin: 0;
@@ -43,20 +44,24 @@ header {
     text-align: center;
     color: var(--color-white);
 }
-.header-main p{
+
+.header-main p {
     padding-top: 25px;
     line-height: 26px;
     max-width: 45%;
     margin: auto;
 }
-.header-main{
+
+.header-main {
     font-size: 16px;
 }
-.header-main h1, .header-main h4, .btn{
+
+.header-main h1, .header-main h4, .btn {
     font-family: 'Source Sans Pro Bold';
 
 }
-.btn{
+
+.btn {
     margin: 50px;
     color: var(--color-white);
     background-color: var(--color-red);
@@ -64,9 +69,11 @@ header {
     border: none;
     border-radius: 50px;
 }
-.btn:hover, .btn:active{
+
+.btn:hover, .btn:active {
     opacity: 0.9;
 }
+
 .nav {
     position: absolute;
     top: 0;
@@ -81,10 +88,74 @@ header {
     margin-left: 40px;
 }
 
+nav input, nav label {
+    display: none;
+}
+
 .nav-menu {
     margin-right: 40px;
 }
 
+/* ------------- */
+
+@media only screen and (max-width: 480px) {
+    .logo {
+        margin-left: 0;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    nav {
+        position: absolute;
+        left: 30px;
+        color: #fff;
+        width: 100%;
+    }
+
+    label img {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    #check {
+        display: none;
+    }
+
+    #check:checked~.nav-menu {
+        display: block;
+
+    }
+
+    .nav-menu {
+        display: none;
+
+        margin-top: 20px;
+        position: absolute;
+        left: -30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        color: #fff;
+        padding: 1rem 1.5rem;
+        display: block;
+    }
+
+
+    /* .nav-menu a {
+        font-size: 2rem;
+        padding: 2rem 3rem;
+    } */
+}
+
+/* -------------- */
 .logo img {
     width: 161px;
 }
@@ -97,10 +168,11 @@ header {
 
 }
 
-@media (max-width:768px){
-    .header-main p{
+@media (max-width:768px) {
+    .header-main p {
         max-width: 90%;
     }
+
     .nav-menu a {
         margin-left: 30px;
     }
