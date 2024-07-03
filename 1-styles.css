@@ -34,9 +34,8 @@
 a {
     text-decoration: none;
 }
-
 a:hover, a:active{
-color: var(--color-red) !important;
+color: var(--color-red);
 }
 
 header {
