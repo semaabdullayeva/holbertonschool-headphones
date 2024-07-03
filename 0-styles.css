@@ -40,7 +40,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 280px 0 100px 0;
     text-align: center;
     color: var(--color-white);
 }
@@ -53,6 +52,7 @@ header {
 }
 
 .header-main {
+    padding: 280px 0 100px 0;
     font-size: 16px;
 }
 
@@ -74,14 +74,12 @@ header {
     opacity: 0.9;
 }
 
-.nav {
-    position: absolute;
-    top: 0;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .logo {
@@ -98,24 +96,84 @@ nav input, nav label {
 
 /* ------------- */
 
+.checkbtn {
+    /* display: none;  cursor: pointer;
+    height: 22px; */
+    width: 30px;
+    position: relative;
+}
+
+.checkbtn span,
+.checkbtn span::before,
+.checkbtn span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: 5px;
+}
+
+.checkbtn span {
+    /* position: relative; */
+    /* background: var(--color-white); */
+    transition: background-color 300ms;
+}
+
+.checkbtn span::before,
+.checkbtn span::after {
+    position: absolute;
+    transition: transform 300ms, top 300ms, bottom 300ms;
+}
+
+.checkbtn span::before {
+    bottom: 10px;
+}
+
+.checkbtn span::after {
+    top: 10px;
+}
+
+#check:checked + .checkbtn span {
+    background: transparent;
+}
+
+#check:checked + .checkbtn span::before {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+#check:checked + .checkbtn span::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+
 @media only screen and (max-width: 480px) {
     .logo {
+        position: absolute;
+        top: 35px;
+        order: 2;
         margin-left: 0;
     }
 
-    .nav {
+    .navbar {
         justify-content: center;
     }
 
+    nav input, nav label {
+        display: none;
+    }
+
     nav {
-        position: absolute;
-        left: 30px;
+        margin-top: 10px;
+        margin-left: 30px;
         color: #fff;
         width: 100%;
     }
 
-    label img {
-        width: 30px;
+    label {
         cursor: pointer;
     }
 
@@ -127,33 +185,28 @@ nav input, nav label {
         display: none;
     }
 
-    #check:checked~.nav-menu {
-        display: block;
-
-    }
-
     .nav-menu {
         display: none;
-
         margin-top: 20px;
-        position: absolute;
-        left: -30px;
         text-align: center;
         width: 100%;
     }
 
     .nav-menu a {
-        color: #fff;
         padding: 1rem 1.5rem;
         display: block;
+        margin-left: 0 !important;
+        margin-right: 30px;
     }
-
-
-    /* .nav-menu a {
-        font-size: 2rem;
-        padding: 2rem 3rem;
-    } */
+    #check:checked ~ .nav-menu {
+        display: block;
+        width: 100%;
+        background-color: var(--color-dark);
+        text-align: center;
+    }
 }
+
+
 
 /* -------------- */
 .logo img {
