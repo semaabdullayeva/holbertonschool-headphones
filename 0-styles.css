@@ -35,8 +35,13 @@ a {
     text-decoration: none;
 }
 
-a:hover, a:active{
-color: var(--color-red) !important;
+a:hover, a:active {
+    color: var(--color-red) !important;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 header {
@@ -51,7 +56,7 @@ header {
 .header-main p {
     padding-top: 25px;
     line-height: 26px;
-    max-width: 45%;
+    max-width: 60%;
     margin: auto;
 }
 
@@ -86,17 +91,17 @@ header {
     padding-top: 40px;
 }
 
-.logo {
+/* .logo {
     margin-left: 40px;
-}
+} */
 
 nav input, nav label {
     display: none;
 }
 
-.nav-menu {
+/* .nav-menu {
     margin-right: 40px;
-}
+} */
 
 /* ------------- */
 
@@ -138,19 +143,53 @@ nav input, nav label {
     top: 10px;
 }
 
-#check:checked + .checkbtn span {
+#check:checked+.checkbtn span {
     background: transparent;
 }
 
-#check:checked + .checkbtn span::before {
+#check:checked+.checkbtn span::before {
     transform: rotate(-45deg);
     bottom: 0;
 }
 
-#check:checked + .checkbtn span::after {
+#check:checked+.checkbtn span::after {
     transform: rotate(45deg);
     top: 0;
 }
+
+
+.logo img {
+    width: 161px;
+}
+
+.nav-menu a {
+    color: var(--color-white);
+    margin-left: 50px;
+    font-size: 12px;
+    font-family: 'Source Sans Pro Bold';
+
+}
+
+/* responsive */
+@media only screen and (max-width:768px) {
+    .header-main p, .we-do-content p {
+        max-width: 90%;
+    }
+
+    .logo {
+        margin-left: 40px;
+    }
+
+    .nav-menu {
+        margin-right: 40px;
+    }
+
+    .nav-menu a {
+        margin-left: 30px;
+    }
+
+}
+
 
 
 
@@ -202,35 +241,11 @@ nav input, nav label {
         margin-left: 0 !important;
         margin-right: 30px;
     }
-    #check:checked ~ .nav-menu {
+
+    #check:checked~.nav-menu {
         display: block;
         width: 100%;
         background-color: var(--color-dark);
         text-align: center;
-    }
-}
-
-
-
-/* -------------- */
-.logo img {
-    width: 161px;
-}
-
-.nav-menu a {
-    color: var(--color-white);
-    margin-left: 50px;
-    font-size: 12px;
-    font-family: 'Source Sans Pro Bold';
-
-}
-
-@media (max-width:768px) {
-    .header-main p {
-        max-width: 90%;
-    }
-
-    .nav-menu a {
-        margin-left: 30px;
     }
 }

@@ -191,13 +191,13 @@ nav input, nav label {
     margin: auto;
 }
 
-.we-do-main {
+.we-do-main, .result-main {
     display: flex;
     justify-content: center;
     margin-top: 100px;
 }
 
-.main-card {
+.main-card, .result-card {
     display: flex;
 }
 
@@ -206,7 +206,34 @@ nav input, nav label {
     margin: 20px;
 }
 
+/* ------------ */
+.our-result {
+    background-image: url("./assets/images/headphones_hero_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: var(--color-white);
+}
 
+.pentagone img {
+    width: 190px;
+}
+
+.percent {
+    font-family: 'Source Sans Pro Bold';
+    font-size: 46px;
+}
+.pentagone{
+    position: relative;
+    margin: 30px;
+}
+.pentagone div {
+    position: absolute;
+    top: 30%;
+    left: 18%;
+    z-index: 500;
+}
 /* responsive */
 @media only screen and (max-width:768px) {
     .header-main p, .we-do-content p {
@@ -225,15 +252,17 @@ nav input, nav label {
         margin-left: 30px;
     }
 
-    .we-do-main {
+    .we-do-main, .result-main {
         flex-direction: column;
         align-items: center;
     }
-    .main-card{
+
+    .main-card, .result-card {
         width: 100%;
         justify-content: space-evenly;
     }
-    .main-card div{
+
+    .main-card div {
         margin-bottom: 30px;
     }
 }
@@ -298,7 +327,10 @@ nav input, nav label {
     }
 
 
-    .main-card{
+    .main-card, .result-card {
         flex-direction: column;
+    }
+    .pentagone div{
+        left: 32%;
     }
 }
