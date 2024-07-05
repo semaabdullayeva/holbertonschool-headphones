@@ -305,7 +305,6 @@ form {
     height: 100%;
     border: none;
     display: block;
-    color: var(--color-blue);
 
 }
 
@@ -358,6 +357,13 @@ form {
 
     .main-card div {
         margin-bottom: 30px;
+    }
+    .social-items {
+        margin-right: 20px;
+    }
+
+    .logo-footer {
+        margin-left: 40px;
     }
 }
 
@@ -428,5 +434,46 @@ form {
     .pentagone div {
         left: 32%;
     }
+
+    footer .container {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .logo-footer {
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+
+    footer .container {
+        padding: 60px 0;
+    }
+}
+
+
+
+footer {
+    background-color: var(--color-blue);
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.logo-footer img {
+    width: 161px;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff81;
+    padding-bottom: 40px;
+}
+
+.social-items a {
+    margin-left: 20px;
 }
 
